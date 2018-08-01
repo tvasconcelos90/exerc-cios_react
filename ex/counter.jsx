@@ -14,12 +14,10 @@ import {inc, dec, stepChanged } from './counterActions'
  )
 
  const mapStateToProps = state => ({ counter: state.counter})
- const mapDispatchToProps = 
-    dispatch => bindActionCreators ({
+ const mapDispatchToProps = dispatch => bindActionCreators ({
         inc,
         dec,
-        stepChanged
-    }, dispatch)
+        stepChanged}, dispatch)
 
- export default connet (mapStateToProps, mapDispatchToProps)(Counter)
+ export default connect (mapStateToProps, mapDispatchToProps)(Counter)
 
